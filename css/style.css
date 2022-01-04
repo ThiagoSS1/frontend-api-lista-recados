@@ -1,0 +1,20 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+div p a {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none
+}
+
+.botaoDeslogar{
+    float: right;
+}

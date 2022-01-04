@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/bootstrap.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col 6">
+                <img class="img-fluid vh-100" src="./img/system.png" alt="">
+            </div>
+
+            <div class="col-6 text-center ">
+                <h4> ENTRAR NO SISTEMA DE RECADOS</h4>
+                <form id="formlogin" class="d-flex justify-content-center" name="formlogin">
+
+                    <div class="col-5 d-flex justify-content-end mb-4">
+                        <input type="text" name="user" id="Usuario" class="form-control" style="width: 90%;" placeholder="Usuario">
+                    </div>
+                    <div class="col-5">
+                        <input type="password" name="password" id="Senha" class="form-control" style="width: 90%;"  placeholder="Senha">
+                    </div>
+
+                </form>
+
+                <div class="d-flex flex-column align-items-center">
+                    <button type="button" id="Entrar" class="btn btn-success col-9" value="Redirecionar" onclick="login()" >ENTRAR</button>
+                    <p>
+                        <a href="index2.html" target="_self">CRIAR CONTA</a>
+                    </p>
+                </div>
+
+            </div>
+            <a id="criarContaBtn"></a>
+        </div>
+        <a id="criarContaBtn"></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

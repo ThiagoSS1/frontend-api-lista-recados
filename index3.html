@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    
+
+    <title>Document</title>
+  </head>
+
+  <body class="container-fluid" >   <!-- //onload="montarRecados() -->
+    <div>
+      <div class="row">
+        <div class="col-12">
+          <h1>Meus Recados</h1>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-4">
+        <div class="d-flex">
+          <button class="btn btn-info" onclick="deslogar()">Logout</button>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between">
+        <div class="col-4 d-flex">
+          <input
+            id="description"
+            type="text"
+            class="col-10"
+            placeholder="Descrição"
+          />
+        </div>
+        <div class="col-8 d-flex justify-content-end">
+          <input
+            id="details"
+            type="text"
+            class="col-10"
+            placeholder="Detalhamento"
+          />
+          <button class="btn btn-primary" onclick="adicionarRecado()">
+            salvar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <table id="table" class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Descrição</th>
+          <th>Detalhamento</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Editar</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              onclick="$('#exampleModalCenter').modal('hide')"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="description">Descrição</label>
+            <div class="d-flex flex-column align-items-center">
+              <input
+                name="description"
+                id="descriptionEdit"
+                type="text"
+                class="col-10"
+                placeholder="Descrição"
+              />
+            </div>
+            <label for="details">Detalhamento</label>
+            <div class="d-flex flex-column align-items-center">
+              <input
+                name="details"
+                id="detailsEdit"
+                type="text"
+                class="col-10"
+                placeholder="Detalhamento"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              onclick="$('#exampleModalCenter').modal('hide')"
+            >
+              Close
+            </button>
+            <button id="buttonSaveEdit" type="button" class="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+      integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

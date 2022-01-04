@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+    <title>Document</title>
+    <style>
+        input {
+            height: 60px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container-fluid vh-100">
+
+        <div class="row align-items-center">
+
+            <div class="col 6">
+                <img class="img-fluid vh-100" src="/img/system.png" alt="">
+            </div>
+
+            <div class="col-6 text-center d-flex-column">
+                <h4 class="text-muted ms-5 mb-4"> CRIAR CONTA</h4>
+
+                <div class="d-flex flex-column" style="margin-left: 150px;">
+
+                    <form id="form1" method="post" class="d-flex-column" action="index.html">
+
+                        <div class="col-4 mb-4 ">
+                            <input name="user" type="text" id="Usuario1" class="form-control " placeholder="User name"
+                                style="width: 400px;" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+
+                        <div class="col-4 mb-4">
+                            <input name="password" type="password" id="Senha1" class="form-control" placeholder="Password"
+                                style="width: 400px;">
+                        </div>
+
+                        <div class="col-4 mb-4">
+                            <input type="password" id="reapeat-pass" class="form-control" placeholder="Repeat Password"
+                                style="width: 400px;">
+                        </div>
+
+                    </form>
+                    <button id="Criar" class="btn btn-success col-9" value="CRIAR CONTA AGORA" onclick="criarUsuario()">CRIAR CONTA AGORA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+</body>
+
+</html>
